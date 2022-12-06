@@ -12,10 +12,17 @@ export default function Output(props) {
         var b = bigint & 255;
     
         return 'rgb(' + r + ',' + g + ',' + b + ')';
-    }
+    };
 
-    return <div style={{width: "208px", height: "26px", backgroundColor: "#ffffff", marginTop: "5px"}}><span>{inputError ? "О Ш И Б К А !" : hex2rgb(color.backgroundColor)}</span></div>
-}
+    const styles = {
+        width: "208px", 
+        height: "26px", 
+        backgroundColor: "#ffffff", 
+        marginTop: "5px"
+    };
+
+    return <div style={styles}><span>{inputError ? "О Ш И Б К А !" : hex2rgb(color.backgroundColor)}</span></div>
+};
 
 
 Output.propTypes = {
